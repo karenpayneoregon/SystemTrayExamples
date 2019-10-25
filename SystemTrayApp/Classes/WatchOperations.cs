@@ -101,7 +101,7 @@ namespace SystemTrayApp.Classes
             TraceListener.WriteLine($"Changed: {e.Name}");
         }
         /// <summary>
-        /// Destroy watcher which stops any watches
+        /// Destroy watcher which stops any events from being triggered
         /// </summary>
         public void Dispose()
         {
