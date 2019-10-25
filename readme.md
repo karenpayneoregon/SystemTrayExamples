@@ -15,6 +15,8 @@ Uses a Timer to prevent the computer to lock on a timeout period from Windows.
 A base project that
 - Shows accessing a window when double clicking the application's icon in the system tray which can be used for whatever
 - Shows a formal project structure in regards for folders and proper namespaces
+- Shows working with a FileSystemWatcher component
+- Utilizing tracer listeners.
 
 ## SystemTrayppUnitTest
 Always have a unit test project
