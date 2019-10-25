@@ -69,7 +69,7 @@ namespace FileSystemWatcher1
         /// <param name="e"></param>
         private void OnRenamed(object sender, RenamedEventArgs e)
         {
-            Console.WriteLine($"Rename: {e.OldName}, {e.Name}");
+            Console.WriteLine($@"Rename: {e.OldName}, {e.Name}");
         }
         /// <summary>
         /// Fired when a file is created
@@ -78,12 +78,12 @@ namespace FileSystemWatcher1
         /// <param name="e"></param>
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
-            Console.WriteLine($"Created: {e.Name}");
+            Console.WriteLine($@"Created: {e.Name}");
         }
 
         private void OnChanged(object sender, FileSystemEventArgs e)
         {
-            Console.WriteLine($"Changed: {e.Name}");
+            Console.WriteLine($@"Changed: {e.Name}");
         }
         /// <summary>
         /// Destroy watcher which stops any watches
