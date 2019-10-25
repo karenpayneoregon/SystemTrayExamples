@@ -18,3 +18,6 @@ A base project that
 
 ## SystemTrayppUnitTest
 Always have a unit test project
+
+## WpfApp
+Shows how to generically iterate controls in a StackPanel
