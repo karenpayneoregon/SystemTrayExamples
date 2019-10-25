@@ -14,6 +14,8 @@ namespace SystemTrayApp.Classes
     /// </summary>
     /// <remarks>
     /// Thread safe Singleton class
+    /// See also
+    /// Lazy https://docs.microsoft.com/en-us/dotnet/api/system.lazy-1?view=netframework-4.8
     /// </remarks>
     public sealed class WatchOperations : IDisposable
     {
