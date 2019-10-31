@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 
 using SystemTrayApp.Classes;
-
 using static System.DateTime;
 
 namespace SystemTrayApp.Forms
@@ -16,8 +15,8 @@ namespace SystemTrayApp.Forms
             /*
              * Setup desired listeners
              */
-            WatchOperations.Instance.FileSystemWatcher.Created += FileSystemWatcher_Created;
-            WatchOperations.Instance.FileSystemWatcher.Renamed += FileSystemWatcher_Renamed;
+            WatchOperations.Instance.FileSystemWatcher.Created += FileSystemWatcherCreated;
+            WatchOperations.Instance.FileSystemWatcher.Renamed += FileSystemWatcherRenamed;
         }
         /// <summary>
         /// Monitor file rename operations. Since the FileSystemWatcher is in another
@@ -25,8 +24,9 @@ namespace SystemTrayApp.Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FileSystemWatcher_Renamed(object sender, RenamedEventArgs e)
+        private void FileSystemWatcherRenamed(object sender, RenamedEventArgs e)
         {
+            ;
             if (ResultsListView.InvokeRequired)
             {
                 Invoke((MethodInvoker)(() =>
@@ -40,7 +40,7 @@ namespace SystemTrayApp.Forms
 
             }
         }
-        private void FileSystemWatcher_Created(object sender, FileSystemEventArgs e)
+        private void FileSystemWatcherCreated(object sender, FileSystemEventArgs e)
         {
             if (ResultsListView.InvokeRequired)
             {
