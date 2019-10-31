@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 using SystemTrayApp.Forms;
 using SystemTrayApp.Properties;
@@ -64,9 +65,18 @@ namespace SystemTrayApp.Classes
 		/// <param name="sender">The source of the event.</param>
 		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
 		void Explorer_Click(object sender, EventArgs e)
-		{
-			Process.Start("explorer", null);
-		}
+        {
+            var targetPathWatched = @"C:\oed\WatchThis";
+
+            if (Directory.Exists(targetPathWatched))
+            {
+                Process.Start(targetPathWatched);
+            }
+            else
+            {
+                Process.Start("explorer", null);
+            }
+        }
 		void ViewWindow_Click(object sender, EventArgs e)
 		{
             if (_isViewWindowLoaded) return;
