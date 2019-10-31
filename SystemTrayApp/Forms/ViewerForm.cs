@@ -36,13 +36,6 @@ namespace SystemTrayApp.Forms
                         Now.ToString("yyyy/MM/dd HH:mm:ss")
                     }))));
 
-                Invoke((MethodInvoker)(() => ResultsListView.AutoResizeColumns(
-                    ColumnHeaderAutoResizeStyle.HeaderSize)
-                    ));
-
-                Invoke((MethodInvoker)(() => ResultsListView.EndUpdate()));
-
-
                 ResizeSetFocus();
 
             }
