@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Security.Policy;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
@@ -32,8 +33,8 @@ namespace DisableScreensaver
             timer1.Interval = (GetScreenSaverTimeout() - 1) * 1000;
 
             notifyIcon1.ContextMenuStrip = GenerateContextMenuStrip();
-        }
 
+        }
         private static void PressScrollLock()
         {
             const byte vkScroll = 0x91;

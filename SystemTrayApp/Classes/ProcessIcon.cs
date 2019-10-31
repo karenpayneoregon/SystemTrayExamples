@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using SystemTrayApp.Forms;
 using SystemTrayApp.Properties;
 
 namespace SystemTrayApp.Classes
@@ -25,7 +26,22 @@ namespace SystemTrayApp.Classes
         /// <param name="e"></param>
         private void _notifyIcon_DoubleClick(object sender, EventArgs e)
         {
-            MessageBox.Show(@"Got here via mouse double click.");
+            var viewForm = new ViewerForm();
+            try
+            {
+                if (viewForm.ShowDialog() == DialogResult.OK)
+                {
+                    // do something
+                }
+                else
+                {
+                    // do not perform any positive actions
+                }
+            }
+            finally
+            {
+                viewForm.Dispose();
+            }
         }
 
         /// <summary>

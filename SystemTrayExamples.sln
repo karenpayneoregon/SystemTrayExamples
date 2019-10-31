@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "File System Watchers", "Fil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemWatcher1", "FileSystemWatcher1\FileSystemWatcher1.csproj", "{0E205D8D-F141-4E24-A3DB-63B856A6627E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Code", "Sample Code", "{6839C31F-4872-4564-9DDC-1441D6D4C5B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

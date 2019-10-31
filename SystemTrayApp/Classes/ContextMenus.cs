@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using SystemTrayApp.Forms;
 using SystemTrayApp.Properties;
 
 namespace SystemTrayApp.Classes
