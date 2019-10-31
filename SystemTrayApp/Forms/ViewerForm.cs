@@ -51,11 +51,7 @@ namespace SystemTrayApp.Forms
                         Now.ToString("yyyy/MM/dd HH:mm:ss")
                     }))));
 
-                Invoke((MethodInvoker)(() => ResultsListView.AutoResizeColumns(
-                        ColumnHeaderAutoResizeStyle.HeaderSize)
-                    ));
-
-                Invoke((MethodInvoker)(() => ResultsListView.EndUpdate()));
+                
             }
 
             ResizeSetFocus();
@@ -65,6 +61,12 @@ namespace SystemTrayApp.Forms
         private void ResizeSetFocus()
         {
             if (ResultsListView.Items.Count <= 0) return;
+
+            Invoke((MethodInvoker)(() => ResultsListView.AutoResizeColumns(
+                    ColumnHeaderAutoResizeStyle.HeaderSize)
+                ));
+
+            Invoke((MethodInvoker)(() => ResultsListView.EndUpdate()));
 
             Invoke((MethodInvoker)(() => ResultsListView.FocusedItem = 
                 ResultsListView.Items[ResultsListView.Items.Count -1]));
