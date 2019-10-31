@@ -50,7 +50,7 @@ namespace SystemTrayApp.Classes
         public void Display()
 		{
 			_notifyIcon.MouseClick += _notifyIcon_MouseClick;
-			_notifyIcon.Icon = Resources.SystemTrayApp;
+			_notifyIcon.Icon = Resources.main;
 			_notifyIcon.Text = @"System Tray Utility Application Demonstration";
 			_notifyIcon.Visible = true;
 

@@ -93,10 +93,30 @@ namespace SystemTrayApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon main {
+            get {
+                object obj = ResourceManager.GetObject("main", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon SystemTrayApp {
             get {
                 object obj = ResourceManager.GetObject("SystemTrayApp", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WinFolder {
+            get {
+                object obj = ResourceManager.GetObject("WinFolder", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

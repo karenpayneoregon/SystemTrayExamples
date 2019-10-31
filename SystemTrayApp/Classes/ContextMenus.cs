@@ -26,7 +26,7 @@ namespace SystemTrayApp.Classes
             mainToolStripMenuItem = new ToolStripMenuItem
             {
                 Text = @"Explorer",
-                Image = Resources.Explorer
+                Image = Resources.WinFolder
             };
 
             mainToolStripMenuItem.Click += Explorer_Click;

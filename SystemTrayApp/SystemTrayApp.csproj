@@ -104,6 +104,9 @@
     <Content Include="Images\About.png" />
     <Content Include="Images\Exit.png" />
     <Content Include="Images\Explorer.png" />
+    <None Include="Images\WinFolder.png" />
+    <None Include="Images\FolderOpen.bmp" />
+    <None Include="Images\main.ico" />
     <Content Include="Images\SystemTrayApp.ico" />
   </ItemGroup>
   <ItemGroup />
