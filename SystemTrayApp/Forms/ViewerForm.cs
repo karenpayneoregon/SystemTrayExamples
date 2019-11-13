@@ -26,7 +26,7 @@ namespace SystemTrayApp.Forms
         /// <param name="e"></param>
         private void FileSystemWatcherRenamed(object sender, RenamedEventArgs e)
         {
-            ;
+            
             if (ResultsListView.InvokeRequired)
             {
                 Invoke((MethodInvoker)(() =>
