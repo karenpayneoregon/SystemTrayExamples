@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
@@ -47,7 +48,8 @@ namespace SystemTrayApp.Classes
 
 
             mainToolStripMenuItem = new ToolStripMenuItem
-            { Text = @"Exit",
+            {
+                Text = @"Exit",
                 Image = Resources.Exit
 
             };
@@ -66,7 +68,7 @@ namespace SystemTrayApp.Classes
 		/// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
 		void Explorer_Click(object sender, EventArgs e)
         {
-            var targetPathWatched = @"C:\oed\WatchThis";
+            var targetPathWatched = ConfigurationManager.AppSettings["WatchFolder"]; ;
 
             if (Directory.Exists(targetPathWatched))
             {
