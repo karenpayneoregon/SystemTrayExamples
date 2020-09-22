@@ -34,6 +34,7 @@
             this.ActionsColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.InformationColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ActionDateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CloseWithOkWindowButton
@@ -65,6 +66,7 @@
             this.InformationColumn,
             this.ActionDateTime});
             this.ResultsListView.FullRowSelect = true;
+            this.ResultsListView.HideSelection = false;
             this.ResultsListView.Location = new System.Drawing.Point(9, 6);
             this.ResultsListView.MultiSelect = false;
             this.ResultsListView.Name = "ResultsListView";
@@ -85,11 +87,22 @@
             // 
             this.ActionDateTime.Text = "Time";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(107, 273);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ViewerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 308);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ResultsListView);
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.CloseWithOkWindowButton);
@@ -108,5 +121,6 @@
         private System.Windows.Forms.ColumnHeader ActionsColumn;
         private System.Windows.Forms.ColumnHeader InformationColumn;
         private System.Windows.Forms.ColumnHeader ActionDateTime;
+        private System.Windows.Forms.Button button1;
     }
 }

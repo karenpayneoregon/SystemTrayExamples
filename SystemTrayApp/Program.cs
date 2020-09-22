@@ -6,7 +6,9 @@ using SystemTrayApp.Classes;
 namespace SystemTrayApp
 {
 	static class Program
-	{
+    {
+        private static ProcessIcon _processIcon;
+
         public static TextWriterTraceListener applicationListener = new TextWriterTraceListener(
             "SystemTrayLog.log", 
             "PayneListener");
@@ -33,13 +35,18 @@ namespace SystemTrayApp
             WatchOperations.Instance.EnableWatch();
 
 
-            using (var processIcon = new ProcessIcon())
-			{
-				processIcon.Display();
-				Application.Run();
-			}
+   //         using (var processIcon = new ProcessIcon())
+			//{
+			//	processIcon.Display();
+			//	Application.Run();
+			//}
 
-		}
+            _processIcon = new ProcessIcon();
+            _processIcon.Display();
+            Application.Run();
+
+
+        }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
@@ -65,6 +72,8 @@ namespace SystemTrayApp
             applicationListener.Flush();
 
             WatchOperations.Instance.DisableWatch();
+
+            _processIcon.RemoveIcon();
         }
     }
 }

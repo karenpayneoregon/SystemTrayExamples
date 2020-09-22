@@ -59,7 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\DataOperations.cs" />
+    <Compile Include="Classes\FileContainer.cs" />
     <Compile Include="Classes\FileOperations.cs" />
+    <Compile Include="Classes\WatchFileContainer.cs" />
     <Compile Include="Classes\WatchOperations.cs" />
     <Compile Include="Interfaces\IConnection.cs" />
     <Compile Include="Interfaces\ITableEntity.cs" />
@@ -100,7 +102,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Classes\Helpers\SupportingClasses.txt" />
     <Content Include="Images\About.png" />
     <Content Include="Images\Exit.png" />
     <Content Include="Images\Explorer.png" />

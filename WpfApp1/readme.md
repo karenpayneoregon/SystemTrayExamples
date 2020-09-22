@@ -1,1 +1,0 @@
-﻿Totally unrelated to **system tray** examples. Code may be of use in the TAPS project.

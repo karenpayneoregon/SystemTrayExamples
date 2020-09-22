@@ -16,7 +16,15 @@ namespace SystemTrayApp.Classes
 		{
 			_notifyIcon = new NotifyIcon();
             _notifyIcon.DoubleClick += _notifyIcon_DoubleClick;
-		}
+        }
+
+        public void RemoveIcon()
+        {
+            _notifyIcon.Visible = false;
+            _notifyIcon.Icon = null;
+            _notifyIcon.Dispose();
+        }
+
         /// <summary>
         /// Do something when double clicking the tray icon, circumvents
         /// _notifyIcon_MouseClick which has been commented out but left to
