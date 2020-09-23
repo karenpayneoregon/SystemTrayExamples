@@ -57,6 +57,11 @@ namespace SystemTrayApp.Classes
         {
             _folderName = ConfigurationManager.AppSettings["WatchFolder"];
 
+            if (!Directory.Exists( _folderName))
+            {
+                throw new Exception("Watch folder does not exist, alter WatchFolder setting in app.config");
+            }
+
             FileSystemWatcher = new FileSystemWatcher(_folderName)
             {
                 Filter = ConfigurationManager.AppSettings["FileFilter"],
